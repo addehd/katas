@@ -41,3 +41,12 @@ function deleteNth(L,N){
 }
 
 console.log(deleteNth(numbers, N))
+ 
+function deleteNth(L,N){
+  const cache = {}
+  return L.filter((i)=>{
+    cache[i] = (cache[i] || 0) + 1
+    return cache[i] <= N
+  })
+}
+console.log(deleteNth(numbers, N))
