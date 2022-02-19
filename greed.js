@@ -43,6 +43,7 @@ function score(dice){
   if (lib[5] >= 3) { sum = sum + 500; }
   if (lib[6] >= 3) { sum = sum + 600; }
   if (lib[1] == 1) { sum = sum + 100; }
+  if (lib[1] == 2) { sum = sum + 200; }
   if (lib[5] == 1) { sum = sum + 50; }
   if (lib[1] > 3) { sum = sum + 100; }
   if (lib[5] > 3) { sum = sum + 50; }
@@ -51,3 +52,14 @@ function score(dice){
 }
 
 console.log(score([5 ,1 ,3 ,4 ,1]));
+
+
+function scoreB( dice ) {
+  var dc = [0,0,0,0,0,0];
+  var tdr = [1000,200,300,400,500,600];
+  var sdr = [100,0,0,0,50,0];
+  dice.forEach(function(x){ dc[x-1]++; });
+  return dc.reduce(function(s,x,i){ 
+    return s + (x >= 3? tdr[i] : 0) + sdr[i]*(x % 3);
+  },0);
+}
