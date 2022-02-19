@@ -1,4 +1,6 @@
-/*
+/*  
+https://www.codewars.com/kata/5270d0d18625160ada0000e4/train/javascript
+
 Greed is a dice game played with five six-sided dice. Your mission 
 is to score a throw according to these rules. 
 You will always be given an array with five six-sided dice values.
@@ -13,7 +15,8 @@ Three 2's =>  200 points
 One   1   =>  100 points
 One   5   =>   50 point
 
-A single die can only be counted once in each roll. For example, 
+
+For example, 
 a given "5" can only count as part of a triplet (contributing to the 500 points) 
 or as a single 50 points, but not both in the same roll.
 
@@ -27,7 +30,7 @@ Throw       Score
 */
 
 function score(dice){
-  lib = { 1:0 , 2:0 , 3:0 , 4:0 , 5:0 }
+  lib = { 1:0 , 2:0 , 3:0 , 4:0 , 5:0 , 6:0 }
   
   for (let i = 0; i < dice.length; i++) {
     lib[dice[i]]++; }
@@ -41,6 +44,10 @@ function score(dice){
   if (lib[6] >= 3) { sum = sum + 600; }
   if (lib[1] == 1) { sum = sum + 100; }
   if (lib[5] == 1) { sum = sum + 50; }
+  if (lib[1] > 3) { sum = sum + 100; }
+  if (lib[5] > 3) { sum = sum + 50; }
 
   return sum;
 }
+
+console.log(score([5 ,1 ,3 ,4 ,1]));
