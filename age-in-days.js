@@ -5,7 +5,6 @@
 //For example if today is 30 November 2015 then
 //ageInDays(2015, 11, 1) returns "You are 29 days old"
 
-
 function ageInDays(year, month, day) {
   const today = new Date();
   const birthDate = new Date(year, month - 1, day);

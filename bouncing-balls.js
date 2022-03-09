@@ -1,7 +1,9 @@
 /* 
-ball drop from height flor 
-ball bounces 0.66 of height
-how many times does mom sees boll from 1.5 window
+https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/javascript
+
+ball drop from h flor 
+ball bounces 0.66 of h
+how many times is ball vied from 1.5 flor window
 
 CONDITIONS
 h i meters must be > 0
@@ -18,10 +20,10 @@ function bouncingBall(h,  bounce,  window) {
   if(h > 0 && bounce > 0 && bounce < 1 && window < h){
     while(h > window){
       h = h * bounce
-      count++
-    }
-    return count
-  }
-  count++
+      count++ }
+    
+  return count } 
+  else {
+    return -1 }
 }
 console.log(bouncingBall(30,0.66,1.5))
