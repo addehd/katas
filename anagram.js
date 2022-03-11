@@ -28,7 +28,7 @@ function anagrams (word, words) {
   });
  return results
 }
-console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
+//console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
 
 /* Elegant Solutions */
 
