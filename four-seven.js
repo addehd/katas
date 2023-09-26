@@ -15,7 +15,6 @@ function fourAndSeven(num){
   var tolvTjugoEtt = num * 3
   var tolvTjugoEttArray = tolvTjugoEtt.toString().slice(0).split('')
 
-  //swap place off tolvEllerTjugoEtt[0] and tolvEllerTjugoEtt[1]
   var tolvEllerTjugoEtt = tolvTjugoEttArray.slice(0)
   var temp = tolvEllerTjugoEtt[0]
   tolvEllerTjugoEtt[0] = tolvEllerTjugoEtt[1]
@@ -32,4 +31,12 @@ function fourSeven(num){
   while(num===7){ return 4 }
   return 0 }
 
+//
+function fourSeven(n){
+  let results = {
+    7 : 4,
+    4 : 7,
+  }
+  return results[n] || 0
+}
 console.log(fourSeven(7))

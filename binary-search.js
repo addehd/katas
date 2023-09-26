@@ -8,11 +8,12 @@ function findMe(target, start, end){
   if(target === arr[mid]){
     return mid;
   }
-  if(target < arr[mid]){
-    return findMe(target, start, mid - 1);
+  //check left side
+  if(target < arr[mid]){ 
+    return findMe(target, start, mid - 1//iteration counting down);
   }
+  //check right side of array
   return findMe(target, mid + 1, end);
-
 }
 
 console.log(findMe('a', 0, arr.length - 1));

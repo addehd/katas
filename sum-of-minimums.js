@@ -17,9 +17,7 @@ the minimums is 1 + 5 + 20 = 26.
 Note: You will always be given a non-empty list containing positive values.
 
 ENJOY CODING :)
-
 */
-
 // function sumOfMinimums(arr){
 //   //sum = []
 //   //loop throug arr
@@ -28,10 +26,5 @@ ENJOY CODING :)
 // }
 
 
-function sumOfMinimums(arr) {
-  return arr.reduce((acc, curr) => acc + Math.min(...curr), 0);
-}
-
 console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]))
-
 console.log(Math.min(...[2,3,5,1,4]))
